@@ -1,0 +1,34 @@
+.render-fond-structure {
+    height: 100%;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    border-radius: 10% 10%;
+
+}
+
+.render-fond {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.temp-align--style {
+    display: flex;
+    justify-content: center;
+}
+
+.image-fond--h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url("./tours.jpg");
+    opacity: 0.50;
+    height: 270px;
+}
+
+.Gif-generator {
+    width: 100%;
+}
