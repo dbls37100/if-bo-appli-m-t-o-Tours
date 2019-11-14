@@ -36,6 +36,8 @@ export default class AxiosApi extends React.Component {
         return Math.floor(Math.random() * (max - min + 1)) + min;
         
     }   
+
+    
    
 
 
@@ -54,8 +56,14 @@ export default class AxiosApi extends React.Component {
                             <h2>{this.state.weather.city.cp }</h2>
                             <h2>Aujourd'hui :</h2>
                             <div className="temp-align--style"> 
-                                <h2>{this.state.weather.forecast[0].tmin } ° min  |</h2>
-                                <h2>|  {this.state.weather.forecast[0].tmax } ° max</h2>
+                            <i className="fas fa-temperature-low"></i>
+                                <h2>{this.state.weather.forecast[0].tmin} ° </h2>
+                                <i className="fas fa-temperature-high"></i>
+                                <h2>{this.state.weather.forecast[0].tmax} ° </h2>
+                            </div>
+                            <div>
+                                <i className="fas fa-wind"></i>
+                                <h2>Vent</h2>
                             </div>
                             <h2>Vous pourrez profitez de {this.state.weather.forecast[0].sun_hours } heures de soleil aujourd'hui</h2>
                             <div className="Gif-generator">

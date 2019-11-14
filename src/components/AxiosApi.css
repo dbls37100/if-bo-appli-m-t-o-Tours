@@ -18,6 +18,18 @@
 .temp-align--style {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fa-temperature-low {
+    width: 10%;
+    font-size: 30px;
+}
+
+.fa-temperature-high {
+    width: 10%;
+    font-size: 30px;
 }
 
 .image-fond--h2{
@@ -32,3 +44,4 @@
 .Gif-generator {
     width: 100%;
 }
+
