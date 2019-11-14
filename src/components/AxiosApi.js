@@ -67,7 +67,6 @@ export default class AxiosApi extends React.Component {
                             </div>
                             <div>
                                 <i className="fas fa-wind"></i>
-                                <h2>Vent</h2>
                             </div>
                             <h2>Vous pourrez profitez de {this.state.weather.forecast[0].sun_hours } heures de soleil aujourd'hui</h2>
                             <div className="Gif-generator">

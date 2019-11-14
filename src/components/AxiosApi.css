@@ -1,6 +1,6 @@
 .render-fond-structure {
     height: 100%;
-    width:50%;
+    width:70%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -52,4 +52,8 @@
 
 .realTimes-temp {
     font-size:25px;
+}
+
+.fa-wind {
+    font-size: 30px;
 }
