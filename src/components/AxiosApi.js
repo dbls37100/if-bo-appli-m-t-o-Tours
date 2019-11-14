@@ -29,6 +29,11 @@ export default class AxiosApi extends React.Component {
             console.log(res)
             this.setState({ weather : res.data });
         })  
+        axios.get("https://api.meteo-concept.com/api/forecast/nextHours?token=77ccae56f0f0a521e8f6b7b325db7bebfd3c8b7d286d4641556ebadeefd5d2f0&insee=37261")
+        .then(response => {
+            console.log(response)
+            this.setState({ realTimes : response.data });
+        })  
     }
 
     gifGenerator(min, max) {
@@ -51,12 +56,11 @@ export default class AxiosApi extends React.Component {
                         <div className="render-fond-structure">
                             <h3>Météo</h3>
                             <div className="image-fond--h2">
-                                <h2>{this.state.weather.city.name }</h2>
                             </div>
-                            <h2>{this.state.weather.city.cp }</h2>
-                            <h2>Aujourd'hui :</h2>
+                            <h2>{this.state.weather.city.name}</h2>
+                            <h2 className="realTimes-temp">{this.state.realTimes.forecast[0].temp2m} °</h2>
                             <div className="temp-align--style"> 
-                            <i className="fas fa-temperature-low"></i>
+                                <i className="fas fa-temperature-low"></i>
                                 <h2>{this.state.weather.forecast[0].tmin} ° </h2>
                                 <i className="fas fa-temperature-high"></i>
                                 <h2>{this.state.weather.forecast[0].tmax} ° </h2>
@@ -67,8 +71,7 @@ export default class AxiosApi extends React.Component {
                             </div>
                             <h2>Vous pourrez profitez de {this.state.weather.forecast[0].sun_hours } heures de soleil aujourd'hui</h2>
                             <div className="Gif-generator">
-                            
-                                <img src={randomGifFroid[this.gifGenerator(0,3)]} alt="GIF generator" />
+                                <img className="align-gif--center" src={randomGifFroid[this.gifGenerator(0,3)]} alt="GIF generator" />
                             </div>
                         </div>
                     </div>

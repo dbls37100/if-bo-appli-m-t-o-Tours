@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: rgb(56,59,68);
     border-radius: 10% 10%;
 
 }
@@ -33,15 +33,23 @@
 }
 
 .image-fond--h2{
-    display: flex;
+    margin-top:50px;
+    display:flex;
     justify-content: center;
     text-align: center;
-    background-image: url("./tours.jpg");
-    opacity: 0.50;
+    background-image:url("./tours.jpg");
+    opacity: 0.40;
     height: 270px;
 }
 
-.Gif-generator {
+.align-gif--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    max-height: 56vh;
 }
 
+.realTimes-temp {
+    font-size:25px;
+}
