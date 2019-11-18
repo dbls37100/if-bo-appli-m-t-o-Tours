@@ -1,0 +1,92 @@
+.accueil-structure--style {
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.Accueil {
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 50px;
+    
+}
+
+.tracking-in-expand {
+    display: column;
+    animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+.tracking-out-contract {
+	        animation: tracking-out-contract 8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.o-color--style {
+  color:#6FCEDC;
+}
+
+@keyframes tracking-out-contract {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+}
+
+.fa-globe-americas {
+    font-size: 100px;
+    margin: 0;
+    color:#FEE501;
+}
+
+@media (orientation: portrait) and (min-width : 267px) and (max-width: 482px) {
+    .Accueil{
+        font-size: 25px;
+        height: 100vh;
+    }  
+}
+
+#test {
+
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotating {
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotating 2s linear infinite;
+  border: none;
+}
+
+#test:hover{
+  animation-play-state: paused;
+  }

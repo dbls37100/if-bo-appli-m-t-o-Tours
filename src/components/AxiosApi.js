@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'; 
 import './AxiosApi.css';
-import './tours.jpg';
+import Tours from './tours.png';
 import Froid from './giphy.GIF';
 import Froid1 from './giffroid.gif';
 import Froid2 from './gif3.gif';
@@ -15,8 +15,8 @@ export default class AxiosApi extends React.Component {
     constructor(props) {
         super(props);
     this.state = {
-        weather: null
-        
+        weather: null,
+        realTimes: null
     }
     }
     
@@ -33,7 +33,20 @@ export default class AxiosApi extends React.Component {
         .then(response => {
             console.log(response)
             this.setState({ realTimes : response.data });
-        })  
+        }) 
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000 
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
+    tick() {
+    this.setState({
+        date: new Date()
+    });
     }
 
     gifGenerator(min, max) {
@@ -56,6 +69,7 @@ export default class AxiosApi extends React.Component {
                         <div className="render-fond-structure">
                             <h3>Météo</h3>
                             <div className="image-fond--h2">
+
                             </div>
                             <h2>{this.state.weather.city.name}</h2>
                             <h2 className="realTimes-temp">{this.state.realTimes.forecast[0].temp2m} °</h2>

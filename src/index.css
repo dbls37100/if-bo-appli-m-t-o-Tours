@@ -3,10 +3,12 @@ height: 100vh;
 width: 100vw;
 background-image: url("./fond.jpg");
 position: relative;
-font-family: 'Alfa Slab One', cursive;
+font-family: 'Public Sans', sans-serif;
+color: white;
+font-size: 20px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Public Sans', sans-serif;
 }
+
