@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.image-test {
+  display: flex;
+  justify-content: flex-start;
+}
 .Accueil {
     align-items: center;
     display:flex;
@@ -55,6 +59,10 @@
   }
 }
 
+.image-test {
+  background-image: url('./logoifebo.png');
+  position: absolute;
+}
 .fa-globe-americas {
     font-size: 100px;
     margin: 0;

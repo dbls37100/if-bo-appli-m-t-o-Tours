@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios'; 
 import './AxiosApi.css';
-import Tours from './tours.png';
 import Froid from './giphy.GIF';
 import Froid1 from './giffroid.gif';
 import Froid2 from './gif3.gif';
@@ -26,17 +25,15 @@ export default class AxiosApi extends React.Component {
     componentDidMount(){
         axios.get("https://api.meteo-concept.com/api/forecast/daily?token=77ccae56f0f0a521e8f6b7b325db7bebfd3c8b7d286d4641556ebadeefd5d2f0&insee=37261")
         .then(res => {
-            console.log(res)
             this.setState({ weather : res.data });
         })  
         axios.get("https://api.meteo-concept.com/api/forecast/nextHours?token=77ccae56f0f0a521e8f6b7b325db7bebfd3c8b7d286d4641556ebadeefd5d2f0&insee=37261")
         .then(response => {
-            console.log(response)
             this.setState({ realTimes : response.data });
         }) 
         this.timerID = setInterval(
             () => this.tick(),
-            1000 
+            1000) 
     }
 
     componentWillUnmount() {
@@ -44,14 +41,13 @@ export default class AxiosApi extends React.Component {
     }
 
     tick() {
-    this.setState({
-        date: new Date()
-    });
+        this.setState({
+            date: new Date()
+        });
     }
 
     gifGenerator(min, max) {
-        console.log(Math.floor(Math.random() * (max - min + 1)) + min)
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+        return Math.floor(Math.random() * (max - min + 1)) + min
         
     }   
 
